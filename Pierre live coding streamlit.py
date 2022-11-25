@@ -8,7 +8,7 @@ import plotly.express as px
 st.title('Hello Wilders, welcome to my application!')
 st.write('coucou coucou')
 ​
-df = pd.read_csv("velib.csv")
+#df = pd.read_csv("velib.csv")
 ​
 # Quasiment tous les éléments streamlit peuvent être affichés dans la "sidebar"
 st.sidebar.title("coucou")
@@ -24,15 +24,15 @@ option_velo = st.sidebar.selectbox(
 col1, col2 = st.columns([2, 1])
 ​
 # Les éléments à afficher dans chaque colonne :
-with col1:
-	fig, ax = plt.subplots()
-	ax = sns.boxplot(df[option_velo])
-	st.pyplot(fig)
+#with col1:
+#	fig, ax = plt.subplots()
+#	ax = sns.boxplot(df[option_velo])
+#	st.pyplot(fig)
 ​
-with col2:
-	fig, ax = plt.subplots()
-	ax = sns.boxplot(df[option_velo])
-	st.pyplot(fig)
+#with col2:
+#	fig, ax = plt.subplots()
+#	ax = sns.boxplot(df[option_velo])
+#	st.pyplot(fig)
 ​
 # Ici, nous repartons en centré pleine page, sans les colonnes
 link_station = "https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_information.json"

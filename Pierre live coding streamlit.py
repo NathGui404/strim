@@ -38,11 +38,9 @@ col1, col2 = st.columns([2, 1])
 link_station = "https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_information.json"
 r_stations = requests.get(link_station)
 df_stations = pd.json_normalize(r_stations.json()['data']['stations'])
-df_merge = pd.merge(left = df,
-         right = df_stations,
-         on = "station_id")
+
 ​
-fig_heatmap = px.density_mapbox(df_merge, 
+fig_heatmap = px.density_mapbox(df_stations, 
                         lat='lat', 
                         lon='lon', 
                         z=option_velo, 
